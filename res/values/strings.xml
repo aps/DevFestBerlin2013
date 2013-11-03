@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PXL ME </string>
+    <string name="action_new">New PixelMe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_new_picture">Take picture</string>
+    <string name="action_select_picture">Select picture</string>
+    <string name="new_pixel_size">Pixel size</string>
+
+</resources>
