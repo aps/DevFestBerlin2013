@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_take_picture"
-        android:title="@string/action_new_picture">
-    </item>
-    <item
         android:id="@+id/action_select_picture"
         android:title="@string/action_select_picture">
+    </item>
+    <item
+        android:id="@+id/action_show_original"
+        android:title="@string/action_show_original">
     </item>
 
 </menu>

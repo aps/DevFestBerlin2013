@@ -5,6 +5,7 @@
     <string name="action_new">New PixelMe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_new_picture">Take picture</string>
+    <string name="action_show_original">Show/hide original</string>
     <string name="action_select_picture">Select picture</string>
     <string name="new_pixel_size">Pixel size</string>
 
