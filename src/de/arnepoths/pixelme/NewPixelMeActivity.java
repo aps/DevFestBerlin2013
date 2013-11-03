@@ -13,6 +13,7 @@ import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -122,18 +123,21 @@ public class NewPixelMeActivity extends Activity {
 	}
 
 	private void filterImage(int dimension) {
-		Config config = mOriginalImage.getConfig();
-		Bitmap image = mOriginalImage.copy(config, false);
-		int width = image.getWidth();
-		int height = image.getHeight();
+		if (dimension < 2) {
+			mPixelImage.setImageBitmap(mOriginalImage);
+		} else {
+			Config config = mOriginalImage.getConfig();
+			Bitmap image = mOriginalImage.copy(config, false);
+			int width = image.getWidth();
+			int height = image.getHeight();
 
-		int[] pixels = new int[width * height];
-		image.getPixels(pixels, 0, image.getWidth(), 0, 0, image.getWidth(),
-				image.getHeight());
+			int[] pixels = new int[width * height];
+			image.getPixels(pixels, 0, image.getWidth(), 0, 0,
+					image.getWidth(), image.getHeight());
 
-		new FilterTask(dimension, mOriginalImage.getWidth(),
-				mOriginalImage.getHeight()).execute(pixels);
-
+			new FilterTask(dimension, mOriginalImage.getWidth(),
+					mOriginalImage.getHeight()).execute(pixels);
+		}
 	}
 
 	private void setImage(Bitmap image) {
